@@ -1,16 +1,16 @@
-import Head from 'next/head'
-import styles from '../../../styles/Products.module.css'
+import Head from 'next/head';
+import styles from '../../../styles/Products.module.css';
 import ProductsGallery from '../../../components/products_gallery';
 import { MyImage } from '../../../components/home';
 
 
 const oknoplastImages : MyImage[] = [
   {src: '/aluhaus-stolarka-aluminiowa-mini.jpg', alt:'aluhaus', title:'Aluhaus', download: '/catalogs/Katalog-ALUHAUS.pdf'}
-]
+];
 
 const krispolImages : MyImage[] = [
   {src: '/krispol-stolarka-aluminiowa.jpg', alt:'stolarka aluminiowa', title:'Stolarka aluminiowa'}
-]
+];
 
 export default function WindowsPage() {
   return (
@@ -28,7 +28,7 @@ export default function WindowsPage() {
           <img className={styles.divider} src="/title_divider_reversed.png"></img>
         </div>
         <div className={styles.landscapeContainer}>
-          <img src={`/aluhaus-stolarka-aluminiowa.jpg`}/>
+          <img src={'/aluhaus-stolarka-aluminiowa.jpg'}/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
@@ -49,5 +49,5 @@ export default function WindowsPage() {
         <ProductsGallery images={krispolImages}/>
       </div>
     </>
-  )
+  );
 }

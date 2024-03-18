@@ -1,8 +1,8 @@
 import Gallery from '../components/gallery';
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
 import Map from './map';
 import { useState, useEffect, useRef } from 'react';
-import { WrenchScrewdriverIcon, UserGroupIcon, Cog6ToothIcon } from "@heroicons/react/24/outline";
+import { WrenchScrewdriverIcon, UserGroupIcon, Cog6ToothIcon } from '@heroicons/react/24/outline';
 
 export interface CarouselImage {
   src: string,
@@ -19,28 +19,28 @@ export interface MyImage {
 }
 
 const homeProductsImages : MyImage[] = [
-  {src: 'okna-winergetic-premium.jpg', alt:'okna-pcv', ref: "/produkty/okna-pcv", title:'Okna PCV', description:'Okna stanowią nie tylko podstawowy element każdego budynku, ale również są jego dekoracją...'},
-  {src: 'brama-garaz.jpg', alt:'brama', ref: "/produkty/bramy-garazowe", title:'Bramy garażowe', description:'Brama powinna być dopasowana do elewacji budynku oraz swoją konstrukcją zapewniać maksimum bezpieczeństwa...'},
-  {src: 'rolety-zew2.jpg', alt:'rolety-zew', ref: "/produkty/rolety-zewnetrzne", title:'Rolety zewnętrzne', description:'Zapewniają wygodę, ułatwiają oszczędzanie energii i poprawiają skuteczność ochrony antywłamaniowej...'},
-  {src: 'drzwi-zew.jpg', alt:'drzwi', ref: "/produkty/drzwi-zewnetrzne", title:'Drzwi zewnętrzne', description:'Oprócz roli zabezpieczenia budynków i mieszkań stanowią też zaporę przed utrata ciepła...'},
-  {src: 'zaluzja-pozioma.jpg', alt:'żaluzje fasadowe', ref: "/produkty/zaluzje-fasadowe", title:'Żaluzje fasadowe', description:'Żaluzje skutecznie chronią wnętrze domu przed promieniami słonecznymi, nie dopuszczając do wzrostu temperatury...'},
-  {src: 'rolety-wew.jpg', alt:'rolety', ref: "/produkty/oslony-wewnetrzne", title:'Osłony wewnętrzne', description:'Na razie brak.'},
-  {src: 'nice-automatyka.jpg', alt:'automatyka', ref: "/produkty/automatyka", title:'Automatyka', description:'Tylko profesjonalny dobór i montaż automatyki domowej zapewnia prawidłowe i długoletnie funkcjonowanie...'},
-  {src: 'parapet-wewnętrzny.jpg', alt:'parapety', ref: "/produkty/parapety", title:'Parapety', description:'Parapety stanowią ważny element wykończeniowy okien...'},
-]
+  {src: 'okna-winergetic-premium.jpg', alt:'okna-pcv', ref: '/produkty/okna-pcv', title:'Okna PCV', description:'Okna stanowią nie tylko podstawowy element każdego budynku, ale również są jego dekoracją...'},
+  {src: 'brama-garaz.jpg', alt:'brama', ref: '/produkty/bramy-garazowe', title:'Bramy garażowe', description:'Brama powinna być dopasowana do elewacji budynku oraz swoją konstrukcją zapewniać maksimum bezpieczeństwa...'},
+  {src: 'rolety-zew2.jpg', alt:'rolety-zew', ref: '/produkty/rolety-zewnetrzne', title:'Rolety zewnętrzne', description:'Zapewniają wygodę, ułatwiają oszczędzanie energii i poprawiają skuteczność ochrony antywłamaniowej...'},
+  {src: 'drzwi-zew.jpg', alt:'drzwi', ref: '/produkty/drzwi-zewnetrzne', title:'Drzwi zewnętrzne', description:'Oprócz roli zabezpieczenia budynków i mieszkań stanowią też zaporę przed utrata ciepła...'},
+  {src: 'zaluzja-pozioma.jpg', alt:'żaluzje fasadowe', ref: '/produkty/zaluzje-fasadowe', title:'Żaluzje fasadowe', description:'Żaluzje skutecznie chronią wnętrze domu przed promieniami słonecznymi, nie dopuszczając do wzrostu temperatury...'},
+  {src: 'rolety-wew.jpg', alt:'rolety', ref: '/produkty/oslony-wewnetrzne', title:'Osłony wewnętrzne', description:'Na razie brak.'},
+  {src: 'nice-automatyka.jpg', alt:'automatyka', ref: '/produkty/automatyka', title:'Automatyka', description:'Tylko profesjonalny dobór i montaż automatyki domowej zapewnia prawidłowe i długoletnie funkcjonowanie...'},
+  {src: 'parapet-wewnętrzny.jpg', alt:'parapety', ref: '/produkty/parapety', title:'Parapety', description:'Parapety stanowią ważny element wykończeniowy okien...'},
+];
 
 const companyProductsImages : MyImage[] = [
-  {src: 'bramy-przemysl.jpg', alt:'bramy-przemyslowe', ref: "/bramy-przemyslowe", title:'Bramy przemysłowe', description:'Na razie brak. To jest teki przykładowy tekst dla jaj żeby sprawdzić czy coś tu w ogóle działa :)'},
-  {src: 'brama-rolowana.jpg', alt:'bramy-rolowane', ref: "/bramy-rolowane", title:'Bramy rolowane', description:'Na razie brak.'},
-  {src: 'rolety-zew.jpg', alt:'kraty-rolowane', ref: "/kraty-rolowane", title:'Kraty zewnętrzne', description:'Na razie brak.'},
-  {src: 'drzwi.jpg', alt:'stolarka-aluminiowa', ref: "/stolarka-aluminiowa", title:'Stolarka aluminiowa', description:'Na razie brak.'}
-]
+  {src: 'bramy-przemysl.jpg', alt:'bramy-przemyslowe', ref: '/bramy-przemyslowe', title:'Bramy przemysłowe', description:'Na razie brak. To jest teki przykładowy tekst dla jaj żeby sprawdzić czy coś tu w ogóle działa :)'},
+  {src: 'brama-rolowana.jpg', alt:'bramy-rolowane', ref: '/bramy-rolowane', title:'Bramy rolowane', description:'Na razie brak.'},
+  {src: 'rolety-zew.jpg', alt:'kraty-rolowane', ref: '/kraty-rolowane', title:'Kraty zewnętrzne', description:'Na razie brak.'},
+  {src: 'drzwi.jpg', alt:'stolarka-aluminiowa', ref: '/stolarka-aluminiowa', title:'Stolarka aluminiowa', description:'Na razie brak.'}
+];
 
 const carouselImages : CarouselImage[] = [
-  {src: "/promotions/koncept_white.jpg"},
-  {src: "/okno-pixel.jpg"},
-  {src: "/promotions/krispol-bramy-garazowe.jpg"}
-]
+  {src: '/promotions/koncept_white.jpg'},
+  {src: '/okno-pixel.jpg'},
+  {src: '/promotions/krispol-bramy-garazowe.jpg'}
+];
 
 export default function HomePage() {
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -74,7 +74,7 @@ export default function HomePage() {
     else if(currentIndex === carouselImages.length) {
       setCurrentIndex(1);
     }
-  }
+  };
 
   const movePrev = () => {
     if(currentIndex !== 1) {
@@ -83,11 +83,11 @@ export default function HomePage() {
     else if(currentIndex === 1) {
       setCurrentIndex(carouselImages.length);
     }
-  }
+  };
 
   const moveDot = (index: number) => {
-    setCurrentIndex(index)
-  }
+    setCurrentIndex(index);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -101,23 +101,23 @@ export default function HomePage() {
       <div className={styles.carouselDiv}>
         <section>
           <div className={styles.carousel} data-carousel>
-            <button onClick={() => movePrev()} className={`${styles["carousel-button"]} ${styles.prev}`}>&#8656;</button>
-            <button onClick={() => moveNext()} className={`${styles["carousel-button"]} ${styles.next}`}>&#8658;</button>
+            <button onClick={() => movePrev()} className={`${styles['carousel-button']} ${styles.prev}`}>&#8656;</button>
+            <button onClick={() => moveNext()} className={`${styles['carousel-button']} ${styles.next}`}>&#8658;</button>
             <ul className={styles.slides}>
               {
                 carouselImages.map((image, imageIndex) => (
-                <li className={currentIndex === imageIndex + 1 ? styles.slideActive : styles.slide}>
-                  <img className={styles.slideImage} src={image.src} alt='home'/>
-                </li>))
+                  <li className={currentIndex === imageIndex + 1 ? styles.slideActive : styles.slide}>
+                    <img className={styles.slideImage} src={image.src} alt='home'/>
+                  </li>))
               }
             </ul>
-            <div className={`${styles["container-dots"]}`}>
-                {Array.from({length: 3}).map((item, index) => (
-                  <div
-                    onClick={() => moveDot(index + 1)}
-                    className={currentIndex === index + 1 ? `${styles["dotActive"]}` : `${styles["dot"]}`}>
-                  </div>
-                ))}
+            <div className={`${styles['container-dots']}`}>
+              {Array.from({length: 3}).map((item, index) => (
+                <div
+                  onClick={() => moveDot(index + 1)}
+                  className={currentIndex === index + 1 ? `${styles['dotActive']}` : `${styles['dot']}`}>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -146,24 +146,24 @@ export default function HomePage() {
         <div className={styles.badgesContainer}>
           <div className={styles.badgesRow}>
             <div className={styles.columnContainer}>
-                <Cog6ToothIcon className={styles.badgeIcon}/>
-                <h2>Serwis</h2>
-                <p>5 lat gwarancji</p>
+              <Cog6ToothIcon className={styles.badgeIcon}/>
+              <h2>Serwis</h2>
+              <p>5 lat gwarancji</p>
             </div>
             <div className={styles.columnContainer}>
-                <WrenchScrewdriverIcon className={styles.badgeIcon}/>
-                <h2>Montaż</h2>
-                <p>Szybki i sprawny</p>
+              <WrenchScrewdriverIcon className={styles.badgeIcon}/>
+              <h2>Montaż</h2>
+              <p>Szybki i sprawny</p>
             </div>
             <div className={styles.columnContainer}>
-                <UserGroupIcon className={styles.badgeIcon}/>
-                <h2>Wieloletnie doświadczenie</h2>
-                <p>Ponad 10 lat w branży</p>
+              <UserGroupIcon className={styles.badgeIcon}/>
+              <h2>Wieloletnie doświadczenie</h2>
+              <p>Ponad 10 lat w branży</p>
             </div>
             <div className={styles.columnContainer}>
-                <UserGroupIcon className={styles.badgeIcon}/>
-                <h2>Fachowe doradztwo</h2>
-                <p>Nie możesz się zdecydować? Pozwól nam pomóc!</p>
+              <UserGroupIcon className={styles.badgeIcon}/>
+              <h2>Fachowe doradztwo</h2>
+              <p>Nie możesz się zdecydować? Pozwól nam pomóc!</p>
             </div>
           </div>
         </div>

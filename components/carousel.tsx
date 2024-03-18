@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState} from 'react';
 
 export interface CarouselImage {
     id: number,
@@ -8,16 +8,16 @@ export interface CarouselImage {
 }
 
 const Carousel = (slides : CarouselImage[]) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
     
-    return (
-        <div>
-            <div style={{backgroundImage: `${slides[currentIndex].src}`}}>
+  return (
+    <div>
+      <div style={{backgroundImage: `${slides[currentIndex].src}`}}>
 
-            </div>
-        </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
 
 export default Carousel;
