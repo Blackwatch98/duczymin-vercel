@@ -3,13 +3,21 @@ import styles from '../../../styles/Products.module.css';
 import ProductsGallery from '../../../components/products_gallery';
 import { MyImage } from '../../../components/home';
 
-
-const oknoplastImages : MyImage[] = [
-  {src: '/aluhaus-stolarka-aluminiowa-mini.jpg', alt:'aluhaus', title:'Aluhaus', download: '/catalogs/Katalog-ALUHAUS.pdf'}
+const oknoplastImages: MyImage[] = [
+  {
+    src: '/aluhaus-stolarka-aluminiowa-mini.jpg',
+    alt: 'aluhaus',
+    title: 'Aluhaus',
+    download: '/catalogs/Katalog-ALUHAUS.pdf',
+  },
 ];
 
-const krispolImages : MyImage[] = [
-  {src: '/krispol-stolarka-aluminiowa.jpg', alt:'stolarka aluminiowa', title:'Stolarka aluminiowa'}
+const krispolImages: MyImage[] = [
+  {
+    src: '/krispol-stolarka-aluminiowa.jpg',
+    alt: 'stolarka aluminiowa',
+    title: 'Stolarka aluminiowa',
+  },
 ];
 
 export default function WindowsPage() {
@@ -25,28 +33,33 @@ export default function WindowsPage() {
         <div className={styles.headerContainer}>
           <img className={styles.divider} src="/title_divider.png"></img>
           <h1>Stolarka aluminiowa</h1>
-          <img className={styles.divider} src="/title_divider_reversed.png"></img>
+          <img
+            className={styles.divider}
+            src="/title_divider_reversed.png"
+          ></img>
         </div>
         <div className={styles.landscapeContainer}>
-          <img src={'/aluhaus-stolarka-aluminiowa.jpg'}/>
+          <img src={'/aluhaus-stolarka-aluminiowa.jpg'} />
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
             <p>
-            Brama garażowa jest jednym z najważniejszych elementów wykończenia domu.
-            Powinna być dopasowana wyglądem do elewacji budynku a także poprzez swoją konstrukcję zapewnić maksimum bezpieczeństwa domownikom.
-            Solidność wykonania oraz profesjonalny montaż to głowne cechy bram i usług oferowanych przez naszą firmę.
+              Brama garażowa jest jednym z najważniejszych elementów wykończenia
+              domu. Powinna być dopasowana wyglądem do elewacji budynku a także
+              poprzez swoją konstrukcję zapewnić maksimum bezpieczeństwa
+              domownikom. Solidność wykonania oraz profesjonalny montaż to
+              głowne cechy bram i usług oferowanych przez naszą firmę.
             </p>
           </div>
         </div>
         <div className={styles.producerNameContainer}>
           <h2>Oknoplast</h2>
         </div>
-        <ProductsGallery images={oknoplastImages}/>
+        <ProductsGallery images={oknoplastImages} />
         <div className={styles.producerNameContainer}>
           <h2>Krispol</h2>
         </div>
-        <ProductsGallery images={krispolImages}/>
+        <ProductsGallery images={krispolImages} />
       </div>
     </>
   );

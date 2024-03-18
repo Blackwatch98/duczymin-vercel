@@ -1,13 +1,11 @@
-import type {NextApiRequest, NextApiResponse} from 'next';
-
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export type Review = {
-    profile_photo_url: string;
-    rating: number;
-    text: string;
-    author_name: string;
+  profile_photo_url: string;
+  rating: number;
+  text: string;
+  author_name: string;
 };
-
 
 export const getStaticProps = async () => {
   const placeId = 'ChIJZxew_ym1G0cRIvXyf4AV-AQ';
@@ -18,12 +16,12 @@ export const getStaticProps = async () => {
   const result = await details.json();
 
   return {
-    props: {data: result}
+    props: { data: result },
   };
 };
 
-
-const getReviews = (data: any
+const getReviews = (
+  data: any
   //req: Request,
   //res: NextApiResponse<Review[]>,
 ) => {

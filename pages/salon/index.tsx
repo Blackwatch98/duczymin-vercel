@@ -2,7 +2,6 @@ import styles from '../../styles/Office.module.css';
 import Head from 'next/head';
 
 export default function WirtualOffice() {
-
   const googleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY;
 
   const streetViewPanoramaOptions = {
@@ -11,7 +10,7 @@ export default function WirtualOffice() {
     zoom: 1,
     addressControl: false,
     showRoadLabels: false,
-    zoomControl: false
+    zoomControl: false,
   };
 
   return (
@@ -26,14 +25,20 @@ export default function WirtualOffice() {
         <div className={styles.headerContainer}>
           <img className={styles.divider} src="/title_divider.png"></img>
           <h1>Zwiedź nasze biuro</h1>
-          <img className={styles.divider} src="/title_divider_reversed.png"></img>
+          <img
+            className={styles.divider}
+            src="/title_divider_reversed.png"
+          ></img>
         </div>
         <div className={styles.viewContainer}>
           <div className={styles.viewPanel}>
-            <iframe src="https://www.google.com/maps/embed?pb=!4v1694009366962!6m8!1m7!1sCAoSLEFGMVFpcE1JS015VGNfelNSbXpmZTBybi1hS2tfRi1CSWl6d2ZibXlSNHQ1!2m2!1d51.79020664676013!2d19.34098470403001!3f190.78!4f-3.0600000000000023!5f0.5970117501821992" loading="lazy"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!4v1694009366962!6m8!1m7!1sCAoSLEFGMVFpcE1JS015VGNfelNSbXpmZTBybi1hS2tfRi1CSWl6d2ZibXlSNHQ1!2m2!1d51.79020664676013!2d19.34098470403001!3f190.78!4f-3.0600000000000023!5f0.5970117501821992"
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
       </div>
-    </> 
+    </>
   );
 }

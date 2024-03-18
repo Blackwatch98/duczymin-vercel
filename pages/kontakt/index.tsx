@@ -4,7 +4,9 @@ import { useState } from 'react';
 import Map from '../../components/map';
 import emailjs from '@emailjs/browser';
 
-function isInputNamedElement(e: Element): e is HTMLInputElement & { name: string } {
+function isInputNamedElement(
+  e: Element
+): e is HTMLInputElement & { name: string } {
   return 'value' in e && 'name' in e;
 }
 
@@ -16,13 +18,20 @@ export default function ContactPanel() {
 
     const formData: Record<string, string> = {};
 
-    Array.from(e.currentTarget.elements).filter(isInputNamedElement).forEach((field) => {
-      if (!field.name) return;
-      formData[field.name] = field.value;
-    });
+    Array.from(e.currentTarget.elements)
+      .filter(isInputNamedElement)
+      .forEach((field) => {
+        if (!field.name) return;
+        formData[field.name] = field.value;
+      });
 
     setState('loading');
-    emailjs.send('service_gycc04y', 'template_c7cdlgz', formData,'msIzurYpXZbmSLSkq');
+    emailjs.send(
+      'service_gycc04y',
+      'template_c7cdlgz',
+      formData,
+      'msIzurYpXZbmSLSkq'
+    );
     setState('ready');
   };
 
@@ -38,34 +47,45 @@ export default function ContactPanel() {
         <div className={styles.headerContainer}>
           <img className={styles.divider} src="/title_divider.png"></img>
           <h1>Kontakt</h1>
-          <img className={styles.divider} src="/title_divider_reversed.png"></img>
+          <img
+            className={styles.divider}
+            src="/title_divider_reversed.png"
+          ></img>
         </div>
         <div className={styles.contactContainer}>
           <div className={styles.contactSubcontainer}>
             <h2>Formularz kontaktowy</h2>
             <form onSubmit={handleOnSubmit}>
               <p>
-                  Imię i nazwisko (wymagane)
+                Imię i nazwisko (wymagane)
                 <span>
-                  <input type='text' id='nameInfo' name='nameInfo'></input>
+                  <input type="text" id="nameInfo" name="nameInfo"></input>
                 </span>
               </p>
               <p>
-                  Adres email (wymagane)
+                Adres email (wymagane)
                 <span>
-                  <input type='text' id='emailAddress' name='emailAddress'></input>
+                  <input
+                    type="text"
+                    id="emailAddress"
+                    name="emailAddress"
+                  ></input>
                 </span>
               </p>
               <p>
-                  Telefon
+                Telefon
                 <span>
-                  <input type='text' id='phoneNumber' name='phoneNumber'></input>
+                  <input
+                    type="text"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                  ></input>
                 </span>
               </p>
               <p>
-                  Treść wiadomości (wymagane)
+                Treść wiadomości (wymagane)
                 <span>
-                  <textarea id='text' name='text'></textarea>
+                  <textarea id="text" name="text"></textarea>
                 </span>
               </p>
               <button>Wyślij</button>
@@ -78,64 +98,64 @@ export default function ContactPanel() {
                 <div className={styles.row}>
                   <div>
                     <p>
-                        Adres:<br></br>
-                        ul. Słowiańska 92<br></br>
-                        95-070 Rąbień<br></br>
-                        łódzkie<br></br>
+                      Adres:<br></br>
+                      ul. Słowiańska 92<br></br>
+                      95-070 Rąbień<br></br>
+                      łódzkie<br></br>
                     </p>
                   </div>
                   <div>
                     <p>
-                        Godziny otwarcia:<br></br>
-                        pn-pt: 9-17<br></br>
-                        sob: 10-13<br></br>
+                      Godziny otwarcia:<br></br>
+                      pn-pt: 9-17<br></br>
+                      sob: 10-13<br></br>
                     </p>
-                  </div> 
+                  </div>
                 </div>
                 <div className={styles.row}>
                   <div>
                     <p>
-                        Kontakt z biurem:<br></br>
-                        +48 42 712 86 50<br></br>
+                      Kontakt z biurem:<br></br>
+                      +48 42 712 86 50<br></br>
                     </p>
                   </div>
                   <div>
                     <p>
-                        Kontakt handlowy:<br></br>
-                        +48 510 113 315<br></br>
+                      Kontakt handlowy:<br></br>
+                      +48 510 113 315<br></br>
                     </p>
-                  </div> 
-                </div>     
+                  </div>
+                </div>
                 <div className={styles.row}>
                   <div>
                     <p>
-                        Kontakt techniczny:<br></br>
-                        +48 503 073 188<br></br>
+                      Kontakt techniczny:<br></br>
+                      +48 503 073 188<br></br>
                     </p>
                   </div>
                   <div>
                     <p>
-                        Email:<br></br>
-                        biuro@duczymin.pl<br></br>
+                      Email:<br></br>
+                      biuro@duczymin.pl<br></br>
                     </p>
                   </div>
-                </div>           
+                </div>
               </div>
             </div>
             <div className={styles.dataContainer}>
               <h2>Dane do faktury</h2>
               <p>
-                  Duczymin Halina Duczymińska<br></br>
-                  NIP: 947 12 24 005<br></br>
-                  ul. Słowiańska 92<br></br>
-                  95-070 Rąbień<br></br>
+                Duczymin Halina Duczymińska<br></br>
+                NIP: 947 12 24 005<br></br>
+                ul. Słowiańska 92<br></br>
+                95-070 Rąbień<br></br>
               </p>
             </div>
           </div>
         </div>
         <div className={styles.mapContainer}>
           <h1>Znajdź nas</h1>
-          <Map/>
+          <Map />
         </div>
       </div>
     </>

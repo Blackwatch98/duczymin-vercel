@@ -7,10 +7,10 @@ import { UIEvent } from 'react';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div>
-      <NavBar/>
-      <Component {...pageProps}/>
-      <Footer/>
-    </div> 
+      <NavBar />
+      <Component {...pageProps} />
+      <Footer />
+    </div>
   );
 }
 
