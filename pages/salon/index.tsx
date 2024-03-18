@@ -1,4 +1,3 @@
-import ReactStreetview from "react-streetview";
 import styles from '../../styles/Office.module.css';
 import Head from 'next/head';
 
