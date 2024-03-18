@@ -61,7 +61,7 @@ export default function Realizations() {
                             id="popup1"
                             className={`${styles.overlay} ${isOpen ? styles.overlayOpen : ''}`}
                                 onClick={() => handleShowDialog(selectedImage)}>
-                        ></div>
+                        </div>
                         <dialog
                             className={`${styles['dialogWindow']} ${isOpen ? styles.open : ''}`}
                             open
