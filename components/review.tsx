@@ -4,7 +4,6 @@ import styles from '../styles/Review.module.css'
 import { StarIcon } from "@heroicons/react/24/outline";
 
 export type ReviewProps = {
-
     src: string;
     rating: number;
     name: string;
@@ -12,7 +11,7 @@ export type ReviewProps = {
 };
 
 
-const Review: FC<ReviewProps> = ({
+export const Review: FC<ReviewProps> = ({
     src, rating, text, name,
 }) => (
 	<div className={styles.opinionCard}>
@@ -21,5 +20,3 @@ const Review: FC<ReviewProps> = ({
 		<p className={styles.rating}>Ocena: {rating}/5 <StarIcon width={18}></StarIcon></p>
 	</div>
 );
-
-export default Review;
