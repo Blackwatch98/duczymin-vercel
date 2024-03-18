@@ -1,16 +1,16 @@
-import Head from 'next/head'
-import styles from '../../../styles/Products.module.css'
+import Head from 'next/head';
+import styles from '../../../styles/Products.module.css';
 import ProductsGallery from '../../../components/products_gallery';
 import { MyImage } from '../../../components/home';
 
 
 const medosImages : MyImage[] = [
   {src: '/medos-parapety-wewnetrzne-mini.jpg', alt:'cennik', title:'Cennik 2023', download: '/catalogs/medos-katalog-parapety-2023.pdf'},
-]
+];
 
 const kratexImages : MyImage[] = [
   {src: '/parapet-wewnętrzny.jpg', alt:'cennik', title:'Cennik 2023', download: '/catalogs/cennik-parapetow-kratex.pdf'}
-]
+];
 
 export default function WindowsPage() {
   return (
@@ -28,7 +28,7 @@ export default function WindowsPage() {
           <img className={styles.divider} src="/title_divider_reversed.png"></img>
         </div>
         <div className={styles.landscapeContainer}>
-          <img src={`/medos-parapety-wewnetrzne.jpg`}/>
+          <img src={'/medos-parapety-wewnetrzne.jpg'}/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
@@ -49,5 +49,5 @@ export default function WindowsPage() {
         <ProductsGallery images={kratexImages}/>
       </div>
     </>
-  )
+  );
 }

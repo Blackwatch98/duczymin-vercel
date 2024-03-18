@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import styles from '../../../styles/Products.module.css'
+import Head from 'next/head';
+import styles from '../../../styles/Products.module.css';
 import ProductsGallery from '../../../components/products_gallery';
 import { MyImage } from '../../../components/home';
 
@@ -12,7 +12,7 @@ const productsImages : MyImage[] = [
   {src: '/okno-pixel.jpg', alt:'okna-marzen', title:'Pixel', download: '/catalogs/OKNOPLAST-PIXEL.pdf'},
   {src: '/okno-prolux.jpg', alt:'okna-prolux', title:'Prolux', download: '/catalogs/OKNOPLAST-PROLUX.pdf'},
   {src: '/okno-koncept.jpg', alt:'okna-koncept', title:'Koncept', download: ''}
-]
+];
 
 export default function WindowsPage() {
   return (
@@ -30,7 +30,7 @@ export default function WindowsPage() {
           <img className={styles.divider} src="/title_divider_reversed.png"></img>
         </div>
         <div className={styles.landscapeContainer}>
-          <img src={`/okna-winergetic-premium.jpg`}/>
+          <img src={'/okna-winergetic-premium.jpg'}/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
@@ -48,5 +48,5 @@ export default function WindowsPage() {
         <ProductsGallery images={productsImages}/>
       </div>
     </>
-  )
+  );
 }

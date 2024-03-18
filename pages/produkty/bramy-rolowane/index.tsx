@@ -1,12 +1,12 @@
-import Head from 'next/head'
-import styles from '../../../styles/Products.module.css'
+import Head from 'next/head';
+import styles from '../../../styles/Products.module.css';
 import ProductsGallery from '../../../components/products_gallery';
 import { MyImage } from '../../../components/home';
 
 
 const krispolImages : MyImage[] = [
   {src: '/krispol-bramy-przemyslowe-rolowane.jpg', alt:'segmentowe', title:'Bramy i kraty rolowane', download: '/catalogs/krispol-katalog-przemyslowe-bramy-i-kraty-rolowane.pdf'}
-]
+];
 
 export default function WindowsPage() {
   return (
@@ -24,7 +24,7 @@ export default function WindowsPage() {
           <img className={styles.divider} src="/title_divider_reversed.png"></img>
         </div>
         <div className={styles.landscapeContainer}>
-          <img src={`/krispol-przemyslowe-bramy-rolowane.jpg`}/>
+          <img src={'/krispol-przemyslowe-bramy-rolowane.jpg'}/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
@@ -41,5 +41,5 @@ export default function WindowsPage() {
         <ProductsGallery images={krispolImages}/>
       </div>
     </>
-  )
+  );
 }

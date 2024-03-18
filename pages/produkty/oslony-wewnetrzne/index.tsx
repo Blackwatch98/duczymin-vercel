@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import styles from '../../../styles/Products.module.css'
+import Head from 'next/head';
+import styles from '../../../styles/Products.module.css';
 import ProductsGallery from '../../../components/products_gallery';
 import { MyImage } from '../../../components/home';
 
@@ -10,7 +10,7 @@ const anwisImages : MyImage[] = [
   {src: '/anwis-zaluzje-aluminiowe.jpg', alt:'aluminiowe', title:'Żaluzje aluminiowe', download: '/catalogs/anwis_zaluzje_nowe.pdf'},
   {src: '/anwis-zaluzja-aluminiowe-juun.jpg', alt:'juun', title:'Żaluzje aluminiowe Juun', download: '/catalogs/anwis_zaluzje_juun.pdf'},
   {src: '/anwis-zaluzja-aluminiowe-luna.jpg', alt:'luna', title:'Żaluzje aluminiowe Luna', download: '/catalogs/anwis_zaluzje_luna.pdf'}
-]
+];
 
 export default function WindowsPage() {
   return (
@@ -28,7 +28,7 @@ export default function WindowsPage() {
           <img className={styles.divider} src="/title_divider_reversed.png"></img>
         </div>
         <div className={styles.landscapeContainer}>
-          <img src={`/anwis-oslony-wewnetrzne.jpg`}/>
+          <img src={'/anwis-oslony-wewnetrzne.jpg'}/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
@@ -45,5 +45,5 @@ export default function WindowsPage() {
         <ProductsGallery images={anwisImages}/>
       </div>
     </>
-  )
+  );
 }

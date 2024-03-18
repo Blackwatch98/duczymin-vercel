@@ -1,12 +1,12 @@
-import Head from 'next/head'
-import styles from '../../../styles/Products.module.css'
+import Head from 'next/head';
+import styles from '../../../styles/Products.module.css';
 import ProductsGallery from '../../../components/products_gallery';
 import { MyImage } from '../../../components/home';
 
 
 const niceImages : MyImage[] = [
   {src: '/nice-naped-mini.jpg', alt:'automatyka', title:'Cennik 2023', download: '/catalogs/nice_cennik.pdf'}
-]
+];
 
 export default function WindowsPage() {
   return (
@@ -24,7 +24,7 @@ export default function WindowsPage() {
           <img className={styles.divider} src="/title_divider_reversed.png"></img>
         </div>
         <div className={styles.landscapeContainer}>
-          <img src={`/nice-automatyka.jpg`}/>
+          <img src={'/nice-automatyka.jpg'}/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
@@ -41,5 +41,5 @@ export default function WindowsPage() {
         <ProductsGallery images={niceImages}/>
       </div>
     </>
-  )
+  );
 }

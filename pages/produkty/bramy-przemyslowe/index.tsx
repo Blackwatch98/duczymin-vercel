@@ -1,16 +1,16 @@
-import Head from 'next/head'
-import styles from '../../../styles/Products.module.css'
+import Head from 'next/head';
+import styles from '../../../styles/Products.module.css';
 import ProductsGallery from '../../../components/products_gallery';
 import { MyImage } from '../../../components/home';
 
 
 const krispolImages : MyImage[] = [
   {src: '/krispol-brama-przemyslowa-mini.jpg', alt:'bramy przemysłowe', title:'Bramy przemysłowe', download: '/catalogs/krispol-katalog-przemyslowe-bramy-segmentowe.pdf'}
-]
+];
 
 const wisniowskiImages : MyImage[] = [
   {src: '/wisniowski-bramy-przemyslowe-segmentowe.jpg', alt:'segmentowe', title:'Segmentowe', download: '/catalogs/bramy-przemyslowe-wisniowski.pdf'}
-]
+];
 
 export default function WindowsPage() {
   return (
@@ -28,7 +28,7 @@ export default function WindowsPage() {
           <img className={styles.divider} src="/title_divider_reversed.png"></img>
         </div>
         <div className={styles.landscapeContainer}>
-          <img src={`/krispol-brama-przemyslowa.jpg`}/>
+          <img src={'/krispol-brama-przemyslowa.jpg'}/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
@@ -49,5 +49,5 @@ export default function WindowsPage() {
         <ProductsGallery images={wisniowskiImages}/>
       </div>
     </>
-  )
+  );
 }
