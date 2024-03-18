@@ -1,0 +1,128 @@
+.galleryContainer {
+    justify-content: center;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%/3, max(64px, 100%/5)), 1fr));
+    column-count: 3;
+    border-radius: 15px;
+    column-gap: 50px;
+    row-gap: 25px;
+}
+
+.img {
+    position: relative;
+    height: auto; 
+    width: auto;
+}
+
+.myCard {
+    position: relative;
+    color: white;
+    height: 350px;
+    width: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 32px;
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+    padding: 10rem 0 0;
+    overflow: hidden;
+
+    transition: transform 500ms ease;
+}
+
+.myCard:hover,
+.card:focus-within {
+    transform: scale(1.05);
+}
+
+.myCardContent {
+    height: 100%;
+    --padding: 1.5em;
+    padding: var(--padding);
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(20 0% 0% / 0.3) 20%,
+        hsl(0 0% 0% / 1)
+    );
+}
+
+@media (hover) {
+    .myCardContent {
+        transform: translateY(55%);
+        transition: transform 500ms ease;
+    }
+
+    .myCard:hover .myCardContent,
+    .myCard:focus-within .myCardContent {
+        transform: translateY(0);
+        transition-delay: 500ms;
+    }
+
+    .card:focus-within .myCardContent {
+        transition-duration: 0ms;
+    }
+
+    .myCardContent > *:not(.myCardTitle) {
+        opacity: 0;
+        transition: opacity 500ms linear;
+    }
+
+    .myCard:hover .myCardContent > *:not(.myCardTitle),
+    .myCard:focus-within .myCardContent > *:not(.myCardTitle) {
+        opacity: 1;
+        transition-delay: 1000ms;
+    }
+
+    .myCardTitle::after {
+        transform: scaleX(0);
+    }
+}
+
+.myCardTitle {
+    position: relative;
+    width: max-content;
+    font-size: 24px;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.myCardTitle::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: calc(100% + var(--padding));
+    left: calc(var(--padding) * -1);
+    bottom: -2px;
+    background: rgb(244, 116, 5);
+    
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+
+.myCard:hover .myCardTitle::after{
+    transform: scaleX(1);
+}
+
+.description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 40%;
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: orange;
+    padding:  0.5em 1.25em;
+    border-radius: 0.25rem;
+    border: none;
+}
+
+.button:hover,
+.button:focus {
+    background-color: rgb(222, 145, 1);
+}

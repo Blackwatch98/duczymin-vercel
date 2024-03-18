@@ -1,0 +1,187 @@
+.bodyContainer {
+    margin-top: 64px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.headerContainer {
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerContainer h1 {
+    font-size: 48px;
+    display: inline-block;
+}
+
+.divider {
+    height: 35px;
+}
+
+.descriptionContainer {
+    width: 100%;
+    display: grid;
+}
+
+.descriptionPanel {
+    width: 70%;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: whitesmoke;
+    font-size: 16px;
+    text-align: justify;
+    justify-self: center;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
+}
+
+.landscapeContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.landscapeContainer img {
+    width: 70%;
+    height: auto;
+    object-fit: fill;
+}
+
+.producerNameContainer {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.producerNameContainer h2{
+    font-size: 30px;
+}
+
+.gridContainer {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    width: 70%;
+    position: relative;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.rowElement {
+    height: 350px;
+    width: 350px;
+    position: relative;
+    border-radius: 10px;
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.rowElement img {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+}
+
+.imageHover {
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    overflow: hidden;
+}
+
+.elementInfoContainer {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.titleContainer {
+    text-align: center;
+}
+
+.titleContainer p {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.buttonContainer {
+    display: flex;
+    width: 100%;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.buttonContainer button {
+    height: 50px;
+    width: 200px;
+    color: white;
+    font-weight: bold;
+    border: 3px solid white;
+    background: none;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+.buttonContainer button:hover {
+    color: black;
+    background: white;
+    transition: all .3s linear;
+}
+
+@media (max-width: 850px) {
+
+    .divider {
+        display: none;
+    }
+
+    .descriptionPanel {
+        width: 100%;
+        text-align: center;
+    }
+
+    .landscapeContainer img {
+        width: 100%;
+    }
+
+    .grid {
+        width: 100%;
+    }
+
+    
+    .rowElement {
+        height: 300px;
+        width: 100%;
+        position: relative;
+        border-radius: 10px;
+        background-size: cover;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+}

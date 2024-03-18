@@ -1,0 +1,52 @@
+.bodyContainer {
+    margin-top: 64px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.headerContainer {
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerContainer h1 {
+    font-size: 48px;
+    display: inline-block;
+}
+
+.divider {
+    height: 35px;
+}
+
+.bodyContainer {
+    margin-top: 64px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.viewContainer {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.viewPanel {
+    height: 750px;
+    width: 1200px;
+    padding: 25px;
+    background-color: lightgray;
+}
+
+.viewPanel iframe {
+    height: 700px;
+    width: 1150px;
+}

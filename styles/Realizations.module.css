@@ -1,0 +1,109 @@
+.bodyContainer {
+    margin-top: 64px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.headerContainer {
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerContainer h1 {
+    font-size: 48px;
+    display: inline-block;
+}
+
+.divider {
+    height: 35px;
+}
+
+.gridContainer {
+    margin-top: 20px;
+    justify-content: center;
+    position: relative;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    border-radius: 15px;
+    grid-gap: 15px;
+}
+
+.photo {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
+.photo .koniec {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+	height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.overlay.overlayOpen {
+    animation: fadeIn 1s forwards;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.dialogWindow {
+    position: fixed;
+    background: #fff;
+    border-radius: 5px;
+    width: 50%;
+    height: 75%;
+    box-shadow: 0 8px 6px -6px black;
+    top: 50%;
+    left: 50%;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 2000;
+}
+
+.dialogWindow.open {
+    animation: fadeIn 1s forwards;
+    cursor: auto;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+.dialogWindow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

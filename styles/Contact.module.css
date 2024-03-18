@@ -1,0 +1,121 @@
+.bodyContainer {
+    margin-top: 64px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.headerContainer {
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerContainer h1 {
+    font-size: 48px;
+    display: inline-block;
+}
+
+.divider {
+    height: 35px;
+}
+
+.contactContainer {
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.contactSubcontainer:first-child  {
+    background-color: lightgray;
+    border-radius: 15px 0 0 15px;
+}
+
+.contactSubcontainer:last-child  {
+    background-color: #333;
+    color: white;
+    border-radius: 0 15px 15px 0;
+}
+
+.contactSubcontainer {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 50%;
+}
+
+.contactSubcontainer input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contactSubcontainer p {
+    margin: 10px 0 0;
+}
+
+.contactSubcontainer p:first-child {
+    margin: 30px 0 0;
+}
+
+.contactSubcontainer textarea {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 13.5em;
+    margin: 0;
+    padding: 12px 20px;
+}
+
+.dataContainer:last-child {
+    margin: 50px 0 0;
+}
+
+.dataContainer:last-child p {
+    margin: 30px 0 0;
+}
+
+.row {
+    display: flex;
+}
+
+.row div {
+    width: 50%;
+}
+
+.mapContainer {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.mapContainer h1 {
+    margin-bottom: 30px;
+    font-size: 30;
+}
+
+.contactContainer button {
+    height: 50px;
+    width: 200px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #333;;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    border: none;
+    padding: 0.5em 1.25em;
+  }
+  
+  .contactContainer button:hover,
+  .contactContainer button:focus {
+    background-color: rgb(71, 71, 71);
+    color: white;
+  }

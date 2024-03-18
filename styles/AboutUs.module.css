@@ -1,0 +1,182 @@
+.bodyContainer {
+    margin-top: 64px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.headerContainer {
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerContainer h1 {
+    font-size: 48px;
+    display: inline-block;
+}
+
+.divider {
+    height: 35px;
+}
+
+.aboutUsContainer {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.aboutUsPanel {
+    display: flex;
+    max-width: 100%;
+    width: 1160px;
+}
+  
+.aboutUsDescriptionContainer {
+    width: 66.66%;
+    text-align: center;
+    padding: 70px;
+}
+
+.aboutUsDescriptionContainer p {
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.signature {
+    font-family: 'Vladimir', sans-serif;
+    font-weight: bold;
+}
+
+.honourContainer {
+    position: relative;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.badgesContainer {
+    padding: 20px;
+}
+  
+.badgesRow {
+    margin-left: -15px;
+    margin-right: -15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    column-count: 4;
+    gap: 20px;
+}
+
+.columnContainer {
+    width: 250px;
+    height: 330px;
+    overflow-wrap: break-word;
+}
+
+.badge {
+    position: relative;
+    vertical-align: top;
+    height: 250px;
+    width: 250px;
+    background-color: #bbbbbb;
+    border-left-style: solid;
+    border-left-color: orange;
+    border-right-style: solid;
+    border-right-color: orange;
+    margin-bottom: 10px;
+}
+
+.badgeIcon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 150px;
+}
+
+.opinionsContainer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.opinionsInnerContainer {
+    max-width: 1200px;
+    position: relative;
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.carousel button {
+    background: url(https://cdn.dsmcdn.com/web/production/slick-arrow.svg) 50% no-repeat;
+    top: 50%;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 46px;
+    background-color: lightgray;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel div > button[data-direction=left] {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.carousel div:first-child button{
+    margin-right: 10px;
+}
+
+.carousel div:last-child button{
+    margin-left: 10px;
+}
+
+.opinionsButton {
+    height: 50px;
+    width: 200px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    border: none;
+    padding: 0.5em 1.25em;
+}
+
+.opinionsButton:hover,
+.opinionsButton:focus {
+  background-color: rgb(222, 145, 1);
+  color: white;
+}
+
+
+.portraitImage {
+    width: 33.33%;
+    height: 50%;
+    margin-left: 30px;
+}
+
+.portraitImage img {
+    object-fit: fill;
+    width: 75%;
+    height: 200%;
+}
+
+@media (max-width: 850px) {
+
+    .divider {
+        display: none;
+    }
+}
