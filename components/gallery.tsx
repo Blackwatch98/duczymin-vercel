@@ -16,7 +16,7 @@ const Gallery: React.FC<ImageProps> = ({images}: ImageProps) => {
                     <div className={styles.myCardContent}>
                         <h3 className={styles.myCardTitle}>{image.title}</h3>
                         <p className={styles.description}>{image.description}</p>
-                        <Link href={image.ref} passHref>
+                        <Link href={image.ref ?? ''} passHref>
                             <button className={styles.button}type="submit">Sprawdź ofertę</button>
                         </Link>
                         

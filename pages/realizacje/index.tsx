@@ -57,7 +57,7 @@ export default function Realizations() {
                             >
                             <img
                                 className="image"
-                                src={selectedImage}
+                                src={selectedImage ?? ''}
                                 alt="no image"
                             />
                             </dialog>

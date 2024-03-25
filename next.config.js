@@ -2,6 +2,20 @@
 const nextConfig = {
   reactStrictMode: true,
   defaultLocale: 'pl-PL',
+    async redirects() {
+      return [
+          {
+              source: '/o-nas',
+              destination: '/o-firmie',
+              permanent: true,
+          },
+          {
+              source: '/rolety-wewnetrzne/:path*',
+              destination: '/produkty/oslony-wewnetrzne',
+              permanent: true,
+          }
+      ]
+    },
   async headers() {
     return [
         {
